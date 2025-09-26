@@ -14,46 +14,107 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="/"
-                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> <svg
-                    class="bi me-2" width="40" height="32" aria-hidden="true">
-                    <use xlink:href="#bootstrap"></use>
-                </svg> <span class="fs-4">Simple header</span> </a>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-        </header>
+    <!-- Tete de page -->
+    <header id="mainHeader" class="container d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4 text-white">Exospace Journey</span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">FAQs</a></li>
+            <li class="nav-item"><a href="cv.html" class="nav-link text-white">About</a></li>
+        </ul>
+    </header>
+    <!-- Image de fond -->
+    <div id="heroImage">
+        <img src="img/fond3.jpg" class="w-100">
     </div>
-    <div class="about-image-card-list">
-        <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(6deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-            class="about-image-wrapper first"><img
-                src="https://cdn.prod.website-files.com/68a06250db2face4039500cc/68ac33a01a8d45847b67d591_About%20Image%201.png"
-                loading="lazy" alt="" class="about-image"></div>
-        <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(6deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-            class="about-image-wrapper second"><img
-                src="https://cdn.prod.website-files.com/68a06250db2face4039500cc/68ac33a0b06b7f3746b2e2ae_About%20Image%202.png"
-                loading="lazy" alt="" class="about-image"></div>
-        <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(6deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-            class="about-image-wrapper third"><img
-                src="https://cdn.prod.website-files.com/68a06250db2face4039500cc/68ac33a1fc79b26131419ea6_About%20Image%203.png"
-                loading="lazy" alt="" class="about-image"></div>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Host a venir:</h2>
+        <div class="row g-4 mb-4">
+            <div class="col-12">
+                <div class="card bg-white text-white shadow" style="height: 300px;">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title display-4">🎉 Événement Principal EN GRAND</h3>
+                        <p class="card-text fs-5">L'événement majeur du moment, mis en avant !</p>
+                        <a href="#" class="btn btn-lg btn-warning">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-4">Événements  (Moyen)</h2>
+
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-md-6">
+                <div class="card shadow" style="height: 200px;">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h4 class="card-title">✨ Événement Secondaire 1</h4>
+                        <p class="card-text">Détail important à ne pas manquer.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card shadow" style="height: 200px;">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h4 class="card-title">💡 Événement Secondaire 2</h4>
+                        <p class="card-text">Une autre nouveauté en vedette.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-4">Autres Événements (Petits)</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card shadow-sm" style="height: 150px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Événement Petit 1</h5>
+                        <p class="card-text"><small class="text-muted">Un événement régulier.</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm" style="height: 150px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Événement Petit 2</h5>
+                        <p class="card-text"><small class="text-muted">Un événement régulier.</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm" style="height: 150px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Événement Petit 3</h5>
+                        <p class="card-text"><small class="text-muted">Un événement régulier.</small></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <!-- Pied de page -->
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="cv.html" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
         <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
     </footer>
-    </div>
 </body>
 
 </html>

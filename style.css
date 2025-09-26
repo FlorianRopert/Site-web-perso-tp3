@@ -1,86 +1,45 @@
+/*
+    Le CSS pour rendre le header transparent et le superposer au carrousel.
+    Assurez-vous que ce code est dans votre fichier style.css
+*/
 
-.about-image-card-list {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    display: flex
-;
+#mainHeader {
+    /* 1. RETIRER LE FOND BLANC ET RENDRE TRANSPARENT */
+    background-color: transparent !important;
+
+    /* 2. RETIRER LA BORDURE BLANCHE DE BOOTSTRAP */
+    border-bottom: none !important;
+
+    /* 3. POSITIONNEMENT POUR FLOTTER AU-DESSUS DU CARROUSEL */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* 4. ASSURER QU'IL EST AU-DESSUS (z-index élevé) */
+    z-index: 1050;
+
+    /* 5. Ajustements visuels */
+    margin-bottom: 0 !important;
+    /* Retire la marge inférieure de l'en-tête */
+    padding-top: 1rem;
 }
-* {
-    box-sizing: border-box;
+
+/* Personnalisation du lien actif 'Home' */
+#mainHeader .nav-link.active {
+    /* Rendre la pastille de fond active transparente */
+    background-color: transparent !important;
+    /* Changer la couleur du texte en blanc (il est déjà géré par text-white dans le HTML, mais c'est une sécurité) */
+    color: rgb(255, 255, 255) !important;
+    /* Ajouter une bordure blanche pour marquer l'élément actif */
+    border: 4px solid white;
+    font-size: 20px;
 }
-user agent stylesheet
-div {
-    display: block;
-    unicode-bidi: isolate;
+
+/* S'assurer que les autres liens (non actifs) sont bien blancs (géré aussi en HTML mais c'est mieux d'assurer) */
+#mainHeader .nav-link {
+    color: white;
+    font-size: 20px;
 }
-body {
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    background-color: var(--neutral--white-200);
-    font-family: var(--_font-family---global-font);
-    color: var(--neutral--gray-700);
-    font-size: var(--_font-family---all-size--16px);
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    line-height: 150%;
-}
-body {
-    color: #333;
-    background-color: #fff;
-    min-height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-}
-.root {
-    --neutral--white-200: whitesmoke;
-    --_font-family---global-font: Manrope, sans-serif;
-    --neutral--gray-700: #5d5d5d;
-    --_font-family---all-size--16px: 1rem;
-    --neutral--black-800: #262626;
-    --_font-family---all-size--58px: 3.625rem;
-    --_font-family---all-size--48px: 3rem;
-    --_font-family---all-size--34px: 2.125rem;
-    --_font-family---all-size--30px: 1.875rem;
-    --_font-family---all-size--24px: 1.5rem;
-    --_font-family---all-size--20px: 1.25rem;
-    --neutral--white: white;
-    --neutral--black-900: #080808;
-    --_font-family---all-size--12px: .75rem;
-    --_font-family---all-size--100px: 6.25rem;
-    --_font-family---all-size--50px: 3.125rem;
-    --neutral--secondary--linear-50: #6e6e6e;
-    --neutral--secondary--linear-100: silver;
-    --brand--brand-color: #ff5e01;
-    --brand--orange-100: #ffddca;
-    --brand--orange-50: #ff7221;
-    --_font-family---all-size--60px: 3.75rem;
-    --_font-family---all-size--80px: 5rem;
-    --_font-family---all-size--40px: 2.5rem;
-    --_font-family---all-size--6px: .375rem;
-    --neutral--white-400: #e5e5e5;
-    --neutral--white-300: #ededed;
-    --neutral--gray-600: #798192;
-    --_font-family---all-size--10px: .625rem;
-    --_font-family---all-size--14px: .875rem;
-    --_font-family---text-size--text-size-small\<deleted\|variable-cc17ae4a-83b4-0d44-486b-2d77ad7d9ac3\>: 0px;
-    --_font-family---text-size--text-size-small-hight\<deleted\|variable-dfe6368a-e911-a600-6bfd-6c3c4da86078\>: 1.375rem;
-    --_font-family---all-size--70px: 4.375rem;
-    --_font-family---all-size--28px: 1.75rem;
-    --_font-family---all-size--32px: 2rem;
-    --_font-family---all-size--38px: 2.375rem;
-    --_font-family---all-size--42px: 2.625rem;
-    --_font-family---all-size--56px: 3.5rem;
-    --_font-family---all-size--66px: 4.125rem;
-    --_font-family---all-size--120px: 7.5rem;
-    --secondary--orang-color: #fff0e8;
-}
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    font-family: sans-serif;
-}
+
+
