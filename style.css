@@ -1,45 +1,282 @@
 /*
-    Le CSS pour rendre le header transparent et le superposer au carrousel.
-    Assurez-vous que ce code est dans votre fichier style.css
+ * PALETTE : Nébuleuse Obscure (Sans Blanc)
+ * #0C0F1D - Bleu Nuit Profond (Fonds Sombres)
+ * #1A284A - Bleu Profond Atlantique (Fonds Secondaires/Header Scrolled)
+ * #C7D4E7 - Gris Lumière (Texte Principal)
+ * #42F2F7 - Cyan Électrique (Accents Froids)
+ * #E80C7A - Rouge Vif (Accents Chauds)
 */
 
-#mainHeader {
-    /* 1. RETIRER LE FOND BLANC ET RENDRE TRANSPARENT */
-    background-color: transparent !important;
+/* --- COULEURS GÉNÉRALES --- */
+body {
+    /* Fond très sombre pour l'effet cosmique */
+    background-color: #0C0F1D; /* Bleu Nuit Profond */
+    color: #C7D4E7; /* Texte Gris Lumière (pour le contenu général) */
+}
 
-    /* 2. RETIRER LA BORDURE BLANCHE DE BOOTSTRAP */
+/* --- TITRES --- */
+h2 {
+    color: #C7D4E7; /* Titres clairs */
+}
+.fk-title {
+    color: #421c99; /* Titres FK en Cyan Électrique */
+}
+.rules-subtitle {
+    color: #E80C7A; /* Sous-titres de règles en Rouge Vif */
+}
+
+/* --- ACCENTS PERSONNALISÉS --- */
+.text-accent-cyan {
+    color: #421c99 !important; /* Cyan Électrique */
+}
+
+/* --- CARTES ET ÉVÉNEMENTS (NOUVEAU STYLE) --- */
+.card {
+    /* Fond de la carte légèrement plus clair que le body */
+    background-color: #1A284A !important; /* Bleu Profond Atlantique */
+    /* Texte sur la carte */
+    color: #C7D4E7 !important; 
+    border: 1px solid #E80C7A; /* Bordure Rouge Vif */
+}
+
+.card.shadow {
+    /* Ombre colorée (Cyan Électrique) pour un effet lumineux */
+    box-shadow: 0 0 15px rgba(66, 242, 247, 0.4), 0 0 5px rgba(66, 242, 247, 0.2) !important;
+}
+
+/* Texte muted adapté au fond sombre */
+.text-muted {
+    color: #9AA7C2 !important; 
+}
+.text-light-gray {
+    color: #C7D4E7 !important;
+}
+
+/* Boutons Outlines */
+.btn-outline-primary {
+    color: #421c99; /* Texte Cyan Électrique */
+    border-color: #421c99; /* Bordure Cyan Électrique */
+    transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+    color: #1A284A !important; /* Texte sombre au survol */
+    background-color: #421c99; /* Fond Cyan Électrique au survol */
+    border-color: #42F2F7;
+    box-shadow: 0 0 10px rgba(66, 242, 247, 0.6);
+}
+
+
+/* --- HEADER (Tête de page) : État Initial (Transparent au sommet) --- */
+#mainHeader {
+    background-color: transparent !important;
     border-bottom: none !important;
 
-    /* 3. POSITIONNEMENT POUR FLOTTER AU-DESSUS DU CARROUSEL */
-    position: absolute;
+    /* ... (autres propriétés conservées) ... */
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
-
-    /* 4. ASSURER QU'IL EST AU-DESSUS (z-index élevé) */
     z-index: 1050;
-
-    /* 5. Ajustements visuels */
     margin-bottom: 0 !important;
-    /* Retire la marge inférieure de l'en-tête */
     padding-top: 1rem;
+    
+    transition: background-color 0.4s ease, border-bottom 0.4s ease; 
+}
+
+/* État Défilé : Appliqué par JavaScript */
+#mainHeader.scrolled {
+    /* Fond sombre du header au défilement */
+    background-color: #1A284A !important; /* Bleu Profond Atlantique */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Bordure Cyan Électrique */
+    border-bottom: 1px solid #42F2F7 !important; /* J'ai remplacé #0004ff par #42F2F7 pour la consistance de la palette */
+    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* 3. COULEUR DU TEXTE (Initial : Gris Lumière) */
+#mainHeader .fs-4,
+#mainHeader .nav-link {
+    /* Texte clair sur l'image sombre */
+    color: #C7D4E7 !important; /* Gris Lumière */
+    transition: color 0.4s ease;
+}
+
+/* 4. COULEUR DU TEXTE (Défilé : Gris Lumière) */
+#mainHeader.scrolled .fs-4,
+#mainHeader.scrolled .nav-link {
+    /* Texte clair sur le fond sombre du header */
+    color: #C7D4E7 !important; /* Gris Lumière */
 }
 
 /* Personnalisation du lien actif 'Home' */
 #mainHeader .nav-link.active {
-    /* Rendre la pastille de fond active transparente */
     background-color: transparent !important;
-    /* Changer la couleur du texte en blanc (il est déjà géré par text-white dans le HTML, mais c'est une sécurité) */
-    color: rgb(255, 255, 255) !important;
-    /* Ajouter une bordure blanche pour marquer l'élément actif */
-    border: 4px solid white;
+    /* Bordure Rouge Vif sur l'image sombre */
+    border: 4px solid #1400c4; 
     font-size: 20px;
 }
+#mainHeader.scrolled .nav-link.active {
+    /* Bordure Cyan Électrique sur le fond sombre du header */
+    border: 4px solid #42F2F7; /* J'ai remplacé #0004ff par #42F2F7 pour la consistance de la palette */
+}
 
-/* S'assurer que les autres liens (non actifs) sont bien blancs (géré aussi en HTML mais c'est mieux d'assurer) */
-#mainHeader .nav-link {
-    color: white;
-    font-size: 20px;
+/* --- FOOTER --- */
+footer {
+    background-color: #0C0F1D;
+    color: #C7D4E7 !important;
+}
+footer .text-body-secondary,
+footer .nav-link {
+    color: #9AA7C2 !important; /* Légèrement plus clair que le fond pour les liens/texte standard */
 }
 
 
+/* --- HERO IMAGE (Effet Parallax Inversé) --- */
+#heroImage {
+    /* ... (propriétés conservées) ... */
+    background-image: url('img/fond3.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.container.my-5 {
+    /* ... (propriétés conservées) ... */
+    margin-top: 0 !important; 
+    padding-top: 3rem; 
+}
+
+/* Masquer l'icône SVG vide dans le header */
+#mainHeader a svg.bi {
+    display: none;
+}
+.demo
+{
+	padding: 50px 0;
+}
+.heading-title
+{
+	margin-bottom: 50px;
+}
+.pricingTable {
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0 -15px;
+    text-align: center;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.pricingTable:hover{
+    border: 2px solid #e46367;
+    margin-top: -30px;
+}
+
+.pricingTable .pricingTable-header{
+    padding: 30px 10px;
+}
+
+.pricingTable .heading{
+    display: block;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size:21px;
+}
+
+.pricingTable .pricing-plans {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d0d0d0;
+    color: #000;
+    font-weight: 900;
+}
+
+.pricingTable .price-value{
+    color: #474747;
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 35px;
+    padding: 0 10px;
+}
+
+.pricingTable .price-value span{
+    font-size: 50px;
+}
+
+.pricingTable .subtitle{
+    color: #82919f;
+    display: block;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: 100;
+}
+
+.pricingTable .pricingContent ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.pricingTable .pricingContent ul li{
+    padding: 20px 0;
+}
+
+.pricingTable .pricingContent ul li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.pricingTable .pricingContent ul li:last-child{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.pricingTable .pricingTable-sign-up{
+    padding: 25px 0;
+}
+
+.pricingTable .btn-block{
+    width: 50%;
+    margin: 0 auto;
+    background: #e46367;
+    border:1px solid transparent;
+    padding: 10px 5px;
+    color:#fff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    transition:0.3s ease;
+}
+
+.pricingTable .btn-block:after{
+    content: "\f090";
+    font-family: 'FontAwesome';
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.pricingTable:hover .btn-block{
+    background:#fff;
+    color: #e46367;
+    border:1px solid #e46367;
+}
+
+@media screen and (max-width:990px){
+    .pricingTable{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .pricingTable{
+       margin: 0 0 30px 0;
+    }
+}

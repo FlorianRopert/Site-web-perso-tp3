@@ -1,0 +1,163 @@
+/* Ajoutez cette règle en haut de votre fichier style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reste du CSS pour la palette "Vintage Poudré" */
+/* PALETTE DE COULEURS
+#F5EEEA - Beige Très Clair/Ivoire (Fond Général)
+#CCB1AB - Rose Poudré Clair (Cartes Claires)
+#9D8F9C - Lavande Sourdine/Moyen (Jumbotron)
+#4B516B - Bleu Ardoise/Foncé (Cartes Foncées)
+#23243C - Bleu Nuit/Très Foncé (Barre Latérale & Texte Principal)
+*/
+
+/* --- COULEURS GÉNÉRALES --- */
+
+body {
+    background-color: #F5EEEA; /* Beige Très Clair */
+    color: #23243C; /* Bleu Nuit pour le texte principal */
+}
+
+.jumbotron-color {
+    background-color: #9D8F9C !important; /* Lavande Sourdine pour les grands titres de section */
+    color: #F5EEEA !important;
+}
+
+.dark-card-color {
+    background-color: #4B516B !important; /* Bleu Ardoise pour les cartes sombres */
+    color: #F5EEEA !important;
+}
+
+.light-card-color {
+    background-color: #CCB1AB !important; /* Rose Poudré Clair pour les cartes claires */
+    color: #23243C !important;
+    border-color: #9D8F9C !important; /* Bordure assortie au Jumbotron */
+}
+
+/* --- BARRE LATÉRALE (SIDEBAR) --- */
+
+.flex-shrink-0 {
+    background-color: #23243C !important; /* Bleu Nuit */
+    color: #F5EEEA !important; /* Ivoire */
+    min-height: 100vh;
+}
+
+.flex-shrink-0 .link-body-emphasis,
+.flex-shrink-0 .fs-5 {
+    color: #F5EEEA !important; /* Ivoire */
+}
+
+.sidebar-icon-color {
+    color: #CCB1AB !important; /* Rose Poudré pour l'icône */
+}
+
+.flex-shrink-0 .border-bottom,
+.flex-shrink-0 .border-top {
+    border-color: rgba(245, 238, 234, 0.2) !important; /* Bordure Ivoire transparente */
+}
+
+/* --- BOUTONS DE LA BARRE LATÉRALE (Toggle Buttons) --- */
+
+.btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(245, 238, 234, 0.85); /* Ivoire transparent */
+    background-color: transparent;
+    border: 0;
+    transition: box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.flex-shrink-0 .btn-toggle {
+    color: rgba(245, 238, 234, 0.85);
+    background-color: #23243C !important; /* Assure le fond Bleu Nuit */
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    color: #F5EEEA; /* Ivoire */
+    background-color: #4B516B; /* Bleu Ardoise au survol */
+    box-shadow: 0 0 0 1px #F5EEEA;
+    border-radius: .375rem;
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: #F5EEEA;
+}
+
+/* Icône de la flèche (SVG) */
+.btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    /* Mise à jour du SVG pour utiliser la couleur Ivoire (#F5EEEA) dans le code pour la flèche */
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23F5EEEA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+/* Navigation des sous-menus (liens) */
+.flex-shrink-0 .btn-toggle-nav a {
+    color: rgba(245, 238, 234, 0.65); /* Ivoire transparent */
+}
+
+.btn-toggle-nav a {
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    display: inline-flex;
+    text-decoration: none;
+    border-radius: .25rem;
+}
+
+.btn-toggle-nav {
+    padding-left: 2rem;
+}
+
+.flex-shrink-0 .btn-toggle-nav a:hover,
+.flex-shrink-0 .btn-toggle-nav a:focus {
+    background-color: #4B516B; /* Bleu Ardoise au survol */
+    color: #F5EEEA;
+}
+/* Ajoutez ceci à la fin de votre fichier style.css */
+
+/* État initial : invisible et légèrement décalé vers le bas */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Transition fluide sur l'opacité et la position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* État final : visible et à sa position normale */
+.scroll-reveal.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Ajoutez ceci à la fin de votre fichier style.css pour un séparateur de section visible */
+.section-divider {
+    border: 0; /* Enlève la bordure par défaut */
+    height: 4px; /* Rend la ligne épaisse */
+    /* Utilise une couleur foncée de votre palette pour une distinction maximale */
+    background-color: #000000; 
+    opacity: 0.8; /* Légère transparence pour l'adoucir un peu */
+    border-radius: 2px; /* Adoucit les coins */
+}
+/* --- NOUVELLE RÈGLE POUR METTRE EN ÉVIDENCE LA SECTION DE CONTENU --- */
+
+/* Appliquer cette classe aux Jumbotrons ou aux conteneurs de cartes */
+.highlighted-section {
+    box-shadow: 0 0 0 8px rgba(75, 81, 107, 0.4),
+                0 0 15px rgba(35, 36, 60, 0.6);
+    
+    transform: scale(1.005); 
+    
+    /* MODIFICATION : Augmentation de la durée de la transition CSS */
+    transition: box-shadow 1.5s ease-in-out, transform 1.5s ease-in-out; 
+}
+/* ... le reste de votre CSS ... */
