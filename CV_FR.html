@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cv.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script src="main.js" defer></script>
+    <title>CV Florian Ropert</title>
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- ========================================== -->
+        <!-- 📌 SIDEBAR : Navigation principale du CV -->
+        <!-- ========================================== -->
+        <div class="flex-shrink-0 p-3 text-white" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center pb-3 mb-3 text-white text-decoration-none border-bottom">
+                <i class="bi bi-person-badge-fill me-2 fs-4 sidebar-icon-color"></i>
+                <span class="fs-5 fw-semibold">Ropert Florian</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                        data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                        <i class="bi bi-person-vcard me-2"></i>
+                        Présentation
+                    </button>
+                    <div class="collapse" id="home-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#contact-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-envelope me-2"></i>Contact</a>
+                            </li>
+                            <li><a href="#hobbie-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-handball me-2"></i>Mes Loisirs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                        data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        <i class="bi bi-mortarboard me-2"></i>
+                        Diplômes
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#gcse-section" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-journal-check me-2"></i>Brevet</a>
+                            </li>
+                            <li><a href="#alevel-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-book me-2"></i>Baccalauréat</a>
+                            </li>
+                            <li><a href="#pix-section" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-award me-2"></i>Certification Pix</a>
+                            </li>
+                            <li><a href="#hnd-section" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-terminal me-2"></i>BTS (1ère Année)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                        data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                        <i class="bi bi-tools me-2"></i>
+                        Compétences
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#web-skill-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-code-slash me-2"></i>Web</a>
+                            </li>
+                            <li><a href="#python-skill-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-filetype-py me-2"></i>Python</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                        data-bs-toggle="collapse" data-bs-target="#internship-collapse" aria-expanded="false">
+                        <i class="bi bi-briefcase me-2"></i>
+                        Stage
+                    </button>
+                    <div class="collapse" id="internship-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#ksb-internship-section"
+                                    class="link-light d-inline-flex text-decoration-none rounded"><i
+                                        class="bi bi-building me-2"></i>Expérience KSB</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <a href="cv.html"
+                        class="nav-link text-white d-inline-flex align-items-center rounded border-0 px-3">
+                        <i class="bi bi-globe2 me-2"></i>
+                        English
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- ================================================== -->
+        <!-- 📄 CONTENU PRINCIPAL : Toutes les sections du CV -->
+        <!-- ================================================== -->
+        
+        <div class="flex-grow-1 p-5">
+
+            <!-- ========== SECTION : INFORMATIONS PERSONNELLES ========== -->
+            <!-- Jumbotron : Titre principal de la section -->
+            <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="personal-information">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold"><i class="bi bi-person-vcard me-3"></i>Informations Personnelles</h1>
+                    <p class="col-md-8 fs-4">Je m'appelle Florian, j'ai 18 ans. Je suis né le 20
+                        décembre 2007.</p>
+                </div>
+            </div>
+
+            <!-- Bloc de contenu : Contact & Loisirs (2 cartes côte à côte) -->
+            <!-- 🔄 Pour inverser l'ordre : déplacez les blocs <div class="col-md-6"> -->
+            <div class="d-flex justify-content-center mb-5">
+                <div class="row align-items-md-stretch" style="width: 100%;">
+                    <!-- Carte 1 : Contact (col-md-6 = 50% de largeur) -->
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="contact-section">
+                            <h2><i class="bi bi-envelope-fill me-2"></i>Contact</h2>
+                            <ul class="list-unstyled">
+                                <li>- Numéro de téléphone : 0782554856</li>
+                                <li>- Email : ropertflorian@gmail.com</li>
+                                <li>- Domicile : 19 Rue René Dufestel, 80870 Moyenneville</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carte 2 : Loisirs (col-md-6 = 50% de largeur) -->
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 border rounded-3 light-card-color text-dark" id="hobbie-section">
+                            <h2><i class="bi bi-handball me-2"></i>Mes Loisirs</h2>
+                            <p>- Handball : J'aime ce sport car c'est un sport où l'esprit d'équipe compte beaucoup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== SÉPARATEUR ========== -->
+            <!-- Ligne de séparation entre sections principales -->
+            <hr class="section-divider my-5">
+
+            <!-- ========== SECTION : DIPLÔMES ========== -->
+            <!-- Jumbotron : Titre principal de la section -->
+            <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="diplomas-section">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold"><i class="bi bi-mortarboard me-3"></i>Diplômes et Formations</h1>
+                </div>
+            </div>
+
+            <!-- Bloc de contenu 1 : Brevet & Baccalauréat (2 cartes côte à côte) -->
+            <div class="d-flex justify-content-center mb-5">
+                <div class="row align-items-md-stretch" style="width: 100%;">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="gcse-section">
+                            <h2><i class="bi bi-journal-check me-2"></i>Brevet des Collèges</h2>
+                            <ul class="list-unstyled">
+                                <li>- Mention très bien.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 border rounded-3 light-card-color text-dark" id="alevel-section">
+                            <h2><i class="bi bi-book me-2"></i>Baccalauréat</h2>
+                            <p>- Spécialité Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc de contenu 2 : Pix & BTS (2 cartes côte à côte) -->
+            <div class="d-flex justify-content-center mb-5">
+                <div class="row align-items-md-stretch" style="width: 100%;">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="pix-section">
+                            <h2><i class="bi bi-award me-2"></i>Certification Pix</h2>
+                            <ul class="list-unstyled">
+                                <li>- Certification obtenue.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 border rounded-3 light-card-color text-dark" id="hnd-section">
+                            <h2><i class="bi bi-terminal me-2"></i>BTS (1ère Année)</h2>
+                            <p>- Spécialité Cybersécurité, Informatique et Réseaux.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== SÉPARATEUR ========== -->
+            <hr class="section-divider my-5">
+
+            <!-- ========== SECTION : COMPÉTENCES ========== -->
+            <!-- Jumbotron : Titre principal de la section -->
+            <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="skills-section">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold"><i class="bi bi-tools me-3"></i>Compétences</h1>
+                    <p class="col-md-8 fs-4">Liste de mes compétences techniques et transversales.</p>
+                </div>
+            </div>
+
+            <!-- Bloc de contenu : Web & Python (2 cartes côte à côte) -->
+            <div class="d-flex justify-content-center mb-5">
+                <div class="row align-items-md-stretch" style="width: 100%;">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="web-skill-section">
+                            <h2><i class="bi bi-code-slash me-2"></i>Développement Web</h2>
+                            <ul class="list-unstyled">
+                                <li>- HTML, CSS, JavaScript</li>
+                                <li>- Bootstrap</li>
+                                <li>- SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 border rounded-3 light-card-color text-dark" id="python-skill-section">
+                            <h2><i class="bi bi-filetype-py me-2"></i>Python</h2>
+                            <p>- Bases, gestion de données.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== SÉPARATEUR ========== -->
+            <hr class="section-divider my-5">
+
+            <!-- ========== SECTION : STAGE ========== -->
+            <!-- Jumbotron : Titre principal de la section -->
+            <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="internship-jumbotron">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold"><i class="bi bi-briefcase me-3"></i>Stage</h1>
+                    <p class="col-md-8 fs-4">Stage chez KSB.</p>
+                </div>
+            </div>
+
+            <!-- Bloc de contenu : KSB Experience (1 carte pleine largeur) -->
+            <!-- 📏 col-md-12 = 100% de largeur (carte unique) -->
+            <div class="d-flex justify-content-center mb-5">
+                <div class="row align-items-md-stretch" style="width: 100%;">
+                    <div class="col-md-12">
+                        <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="ksb-internship-section">
+                            <h2><i class="bi bi-building me-2"></i>Aperçu de KSB et Expérience</h2>
+                            <p>KSB est une entreprise allemande de renom et un leader mondial dans la fabrication de
+                                pompes, de vannes et de systèmes de transport de fluides.</p>
+                            <p>Pendant le stage, j'ai effectué une rotation dans divers départements pour acquérir une
+                                compréhension complète des opérations de l'entreprise. Mon expérience a inclus :</p>
+                            <h5 class="mt-4">Départements Visités :</h5>
+                            <ul class="list-unstyled">
+                                <li>- Service Informatique : J'ai acquis un aperçu de l'infrastructure technologique de
+                                    l'entreprise.</li>
+                                <li>- Département d'Usinage : J'ai observé la programmation des outils d'usinage
+                                    utilisés pour la fabrication.</li>
+                                <li>- Comptabilité : J'ai appris les processus de gestion financière.</li>
+                                <li>- Bureau d'Étude : J'ai vu comment les nouveaux produits sont conçus et développés.
+                                </li>
+                                <li>- Postes d'Usinage : J'ai été témoin des différentes étapes de fabrication.</li>
+                                <li>- Service Après-Vente (SAV) : J'ai compris comment le support client et la
+                                    maintenance sont gérés.</li>
+                                <li>- Inventaire (Stock) : J'ai appris la gestion et l'organisation des stocks.</li>
+                                <li>- Service de Test : J'ai vu comment les produits sont testés pour la qualité et la
+                                    performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,3 +1,7 @@
+/* ========================================
+   STYLES COMMUNS À TOUTES LES PAGES
+   ======================================== */
+
 /*
  * PALETTE : Nébuleuse Obscure (Sans Blanc)
  * #0C0F1D - Bleu Nuit Profond (Fonds Sombres)
@@ -9,120 +13,75 @@
 
 /* --- COULEURS GÉNÉRALES --- */
 body {
-    /* Fond très sombre pour l'effet cosmique */
-    background-color: #0C0F1D; /* Bleu Nuit Profond */
-    color: #C7D4E7; /* Texte Gris Lumière (pour le contenu général) */
+    background-color: #0C0F1D;
+    color: #C7D4E7;
 }
 
 /* --- TITRES --- */
 h2 {
-    color: #C7D4E7; /* Titres clairs */
-}
-.fk-title {
-    color: #421c99; /* Titres FK en Cyan Électrique */
-}
-.rules-subtitle {
-    color: #E80C7A; /* Sous-titres de règles en Rouge Vif */
+    color: #C7D4E7;
 }
 
 /* --- ACCENTS PERSONNALISÉS --- */
 .text-accent-cyan {
-    color: #421c99 !important; /* Cyan Électrique */
+    color: #421c99 !important;
 }
 
-/* --- CARTES ET ÉVÉNEMENTS (NOUVEAU STYLE) --- */
+/* --- CARTES ET ÉVÉNEMENTS --- */
 .card {
-    /* Fond de la carte légèrement plus clair que le body */
-    background-color: #1A284A !important; /* Bleu Profond Atlantique */
-    /* Texte sur la carte */
-    color: #C7D4E7 !important; 
-    border: 1px solid #E80C7A; /* Bordure Rouge Vif */
+    background-color: #1A284A !important;
+    color: #C7D4E7 !important;
 }
 
 .card.shadow {
-    /* Ombre colorée (Cyan Électrique) pour un effet lumineux */
     box-shadow: 0 0 15px rgba(66, 242, 247, 0.4), 0 0 5px rgba(66, 242, 247, 0.2) !important;
 }
 
 /* Texte muted adapté au fond sombre */
 .text-muted {
-    color: #9AA7C2 !important; 
+    color: #9AA7C2 !important;
 }
+
 .text-light-gray {
     color: #C7D4E7 !important;
 }
 
 /* Boutons Outlines */
 .btn-outline-primary {
-    color: #421c99; /* Texte Cyan Électrique */
-    border-color: #421c99; /* Bordure Cyan Électrique */
+    color: #421c99;
+    border-color: #421c99;
     transition: all 0.3s ease;
 }
+
 .btn-outline-primary:hover {
-    color: #1A284A !important; /* Texte sombre au survol */
-    background-color: #421c99; /* Fond Cyan Électrique au survol */
+    color: #1A284A !important;
+    background-color: #421c99;
     border-color: #42F2F7;
     box-shadow: 0 0 10px rgba(66, 242, 247, 0.6);
 }
 
-
-/* --- HEADER (Tête de page) : État Initial (Transparent au sommet) --- */
-#mainHeader {
-    background-color: transparent !important;
-    border-bottom: none !important;
-
-    /* ... (autres propriétés conservées) ... */
-    position: absolute; 
+/* --- HEADER STATIQUE (mainHeader2) - Utilisé sur boutique.html et galerie --- */
+#mainHeader2 {
+    background-color: #1A284A !important;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1050;
-    margin-bottom: 0 !important;
-    padding-top: 1rem;
-    
-    transition: background-color 0.4s ease, border-bottom 0.4s ease; 
-}
-
-/* État Défilé : Appliqué par JavaScript */
-#mainHeader.scrolled {
-    /* Fond sombre du header au défilement */
-    background-color: #1A284A !important; /* Bleu Profond Atlantique */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    /* Bordure Cyan Électrique */
-    border-bottom: 1px solid #42F2F7 !important; /* J'ai remplacé #0004ff par #42F2F7 pour la consistance de la palette */
-    
+    border-bottom: 1px solid #175355 !important;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-/* 3. COULEUR DU TEXTE (Initial : Gris Lumière) */
-#mainHeader .fs-4,
-#mainHeader .nav-link {
-    /* Texte clair sur l'image sombre */
-    color: #C7D4E7 !important; /* Gris Lumière */
-    transition: color 0.4s ease;
+#mainHeader2 .fs-4,
+#mainHeader2 .nav-link {
+    color: #C7D4E7 !important;
 }
 
-/* 4. COULEUR DU TEXTE (Défilé : Gris Lumière) */
-#mainHeader.scrolled .fs-4,
-#mainHeader.scrolled .nav-link {
-    /* Texte clair sur le fond sombre du header */
-    color: #C7D4E7 !important; /* Gris Lumière */
+#mainHeader2 .nav-link.active {
+    border: 2px solid #42F2F7;
 }
 
-/* Personnalisation du lien actif 'Home' */
-#mainHeader .nav-link.active {
-    background-color: transparent !important;
-    /* Bordure Rouge Vif sur l'image sombre */
-    border: 4px solid #1400c4; 
-    font-size: 20px;
-}
-#mainHeader.scrolled .nav-link.active {
-    /* Bordure Cyan Électrique sur le fond sombre du header */
-    border: 4px solid #42F2F7; /* J'ai remplacé #0004ff par #42F2F7 pour la consistance de la palette */
+#mainHeader2 a svg.bi {
+    display: none;
 }
 
 /* --- FOOTER --- */
@@ -130,16 +89,79 @@ footer {
     background-color: #0C0F1D;
     color: #C7D4E7 !important;
 }
+
 footer .text-body-secondary,
 footer .nav-link {
-    color: #9AA7C2 !important; /* Légèrement plus clair que le fond pour les liens/texte standard */
+    color: #9AA7C2 !important;
+}
+
+p.card-text small {
+    color: #8aa5fc !important;
+}
+
+span.text-muted {
+    color: #8aa5fc !important;
 }
 
 
-/* --- HERO IMAGE (Effet Parallax Inversé) --- */
+/* ========================================
+   STYLES SPÉCIFIQUES À index.html
+   ======================================== */
+
+/* --- HEADER DYNAMIQUE (mainHeader) - Utilisé uniquement sur index.html --- */
+#mainHeader {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    margin-bottom: 0 !important;
+    padding-top: 1rem;
+    transition: background-color 0.4s ease, border-bottom 0.4s ease;
+}
+
+/* État Défilé : Appliqué par JavaScript */
+#mainHeader.scrolled {
+    background-color: #1A284A !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #175355 !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#mainHeader .fs-4,
+#mainHeader .nav-link {
+    color: #C7D4E7 !important;
+    transition: color 0.4s ease;
+}
+
+#mainHeader.scrolled .fs-4,
+#mainHeader.scrolled .nav-link {
+    color: #C7D4E7 !important;
+}
+
+#mainHeader .nav-link.active {
+    background-color: transparent !important;
+    border: 2px solid #1400c4;
+    font-size: 20px;
+}
+
+#mainHeader.scrolled .nav-link.active {
+    border: 2px solid #42F2F7;
+}
+
+#mainHeader a svg.bi {
+    display: none;
+}
+
+/* --- HERO IMAGE (Effet Parallax) - index.html uniquement --- */
 #heroImage {
-    /* ... (propriétés conservées) ... */
-    background-image: url('img/fond3.jpg'); 
+    background-image: url('img/fond3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -150,25 +172,50 @@ footer .nav-link {
     margin-bottom: 0;
 }
 
-/* --- CONTENU PRINCIPAL --- */
+/* --- CONTENU PRINCIPAL - index.html --- */
 .container.my-5 {
-    /* ... (propriétés conservées) ... */
-    margin-top: 0 !important; 
-    padding-top: 3rem; 
+    margin-top: 0 !important;
+    padding-top: 3rem;
 }
 
-/* Masquer l'icône SVG vide dans le header */
-#mainHeader a svg.bi {
-    display: none;
+/* --- TITRES SPÉCIFIQUES index.html --- */
+.fk-title {
+    color: #421c99;
 }
-.demo
-{
-	padding: 50px 0;
+
+.rules-subtitle {
+    color: #E80C7A;
 }
-.heading-title
-{
-	margin-bottom: 50px;
+
+/* --- RÈGLES (Cards avec styles spécifiques) - index.html --- */
+.rules-update-date {
+    text-align: center;
+    color: #9AA7C2;
+    font-style: italic;
+    margin-bottom: 1rem;
 }
+
+.rules-list {
+    padding-left: 1.5rem;
+}
+
+.rules-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   STYLES SPÉCIFIQUES À boutique.html
+   ======================================== */
+
+.demo {
+    padding: 50px 0;
+}
+
+.heading-title {
+    margin-bottom: 50px;
+}
+
 .pricingTable {
     border: 1px solid #dbdbdb;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
@@ -177,21 +224,21 @@ footer .nav-link {
     transition: all 0.4s ease-in-out 0s;
 }
 
-.pricingTable:hover{
+.pricingTable:hover {
     border: 2px solid #e46367;
     margin-top: -30px;
 }
 
-.pricingTable .pricingTable-header{
+.pricingTable .pricingTable-header {
     padding: 30px 10px;
 }
 
-.pricingTable .heading{
+.pricingTable .heading {
     display: block;
     color: #000;
     font-weight: 900;
     text-transform: uppercase;
-    font-size:21px;
+    font-size: 21px;
 }
 
 .pricingTable .pricing-plans {
@@ -201,7 +248,7 @@ footer .nav-link {
     font-weight: 900;
 }
 
-.pricingTable .price-value{
+.pricingTable .price-value {
     color: #474747;
     display: block;
     font-size: 25px;
@@ -210,11 +257,11 @@ footer .nav-link {
     padding: 0 10px;
 }
 
-.pricingTable .price-value span{
+.pricingTable .price-value span {
     font-size: 50px;
 }
 
-.pricingTable .subtitle{
+.pricingTable .subtitle {
     color: #82919f;
     display: block;
     font-size: 15px;
@@ -222,13 +269,13 @@ footer .nav-link {
     font-weight: 100;
 }
 
-.pricingTable .pricingContent ul{
+.pricingTable .pricingContent ul {
     padding: 0;
     list-style: none;
     margin-bottom: 0;
 }
 
-.pricingTable .pricingContent ul li{
+.pricingTable .pricingContent ul li {
     padding: 20px 0;
 }
 
@@ -236,47 +283,195 @@ footer .nav-link {
     background-color: #fff;
 }
 
-.pricingTable .pricingContent ul li:last-child{
+.pricingTable .pricingContent ul li:last-child {
     border-bottom: 1px solid #dbdbdb;
 }
 
-.pricingTable .pricingTable-sign-up{
+.pricingTable .pricingTable-sign-up {
     padding: 25px 0;
 }
 
-.pricingTable .btn-block{
+.pricingTable .btn-block {
     width: 50%;
     margin: 0 auto;
     background: #e46367;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     padding: 10px 5px;
-    color:#fff;
+    color: #fff;
     text-transform: capitalize;
     border-radius: 5px;
-    transition:0.3s ease;
+    transition: 0.3s ease;
 }
 
-.pricingTable .btn-block:after{
+.pricingTable .btn-block:after {
     content: "\f090";
     font-family: 'FontAwesome';
     padding-left: 10px;
     font-size: 15px;
 }
 
-.pricingTable:hover .btn-block{
-    background:#fff;
+.pricingTable:hover .btn-block {
+    background: #fff;
     color: #e46367;
-    border:1px solid #e46367;
+    border: 1px solid #e46367;
 }
 
-@media screen and (max-width:990px){
-    .pricingTable{
+@media screen and (max-width: 990px) {
+    .pricingTable {
         margin-bottom: 30px;
     }
 }
 
-@media screen and (max-width:767px){
-    .pricingTable{
-       margin: 0 0 30px 0;
+@media screen and (max-width: 767px) {
+    .pricingTable {
+        margin: 0 0 30px 0;
+    }
+}
+
+/* --- TABLEAUX DE COMPARAISON - boutique.html --- */
+.table-responsive {
+    background-color: #0C0F1D;
+    border: 1px solid rgba(66, 242, 247, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(66, 242, 247, 0.2);
+}
+
+.table {
+    color: #C7D4E7;
+    --bs-table-bg: #0C0F1D;
+    --bs-table-border-color: #1A284A;
+}
+
+.table td,
+.table th {
+    background-color: #0C0F1D !important;
+    color: #C7D4E7;
+}
+
+.table thead th {
+    border-bottom-color: #1A284A;
+    color: #42F2F7;
+    font-weight: bold;
+}
+
+.table tbody tr th,
+.table tbody tr td {
+    border-top-color: #1A284A;
+}
+
+.table tbody tr th.text-start {
+    background-color: #0C0F1D !important;
+    border-right: 1px solid #1A284A;
+    color: #C7D4E7;
+}
+
+.table > :not(caption) > * > * {
+    background-color: var(--bs-table-bg);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #0C0F1D !important;
+}
+
+.table tbody td,
+.table tbody th {
+    color: #C7D4E7 !important;
+}
+
+.table-content-text {
+    color: #C7D4E7 !important;
+    background: none !important;
+    border: none !important;
+}
+
+
+/* ========================================
+   STYLES SPÉCIFIQUES À LA GALERIE (galerie.html)
+   ======================================== */
+
+/* Espacement pour les galeries */
+.site-section {
+    padding: 60px 0 ;
+}
+
+/* Espacement entre les titres de galerie */
+.site-section-heading {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Espacement des images dans la grille */
+#lightgallery .item,
+#lightgallery2 .item {
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+/* Effet hover sur les images */
+#lightgallery .item img,
+#lightgallery2 .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+#lightgallery .item:hover img,
+#lightgallery2 .item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuster l'espacement de la grille */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Espacement supplémentaire pour les colonnes */
+.col-sm-6, .col-md-4, .col-lg-3, .col-xl-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Espace entre les deux galeries */
+.site-section + .site-section {
+    margin-top: 80px;
+}
+
+/* Responsive - tablettes */
+@media (max-width: 991px) {
+    #lightgallery .item,
+    #lightgallery2 .item {
+        margin-bottom: 25px;
+    }
+    
+    #lightgallery .item img,
+    #lightgallery2 .item img {
+        height: 250px;
+    }
+}
+
+/* Responsive - mobiles */
+@media (max-width: 767px) {
+    #lightgallery .item,
+    #lightgallery2 .item {
+        margin-bottom: 20px;
+    }
+    
+    #lightgallery .item img,
+    #lightgallery2 .item img {
+        height: 200px;
+    }
+    
+    .site-section {
+        padding: 40px 0;
+    }
+    
+    .site-section + .site-section {
+        margin-top: 40px;
     }
 }
