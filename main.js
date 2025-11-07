@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     // Classes CSS à manipuler
     const HIGHLIGHT_CLASS = 'highlighted-section';
-    const SCROLL_DURATION_MS = 600; 
-    
+    const SCROLL_DURATION_MS = 600;
+
     // NOUVELLE VARIABLE : Durée en millisecondes pendant laquelle l'ombre restera visible (2.5 secondes)
-    const HIGHLIGHT_DURATION_MS = 2500; 
+    const HIGHLIGHT_DURATION_MS = 2500;
 
 
     // 1. Gérer l'animation du scroll-reveal (code inchangé)
@@ -76,19 +76,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 2. Gérer la mise en évidence de la section de contenu
     const navLinks = document.querySelectorAll('.btn-toggle-nav a');
-    const contentSections = document.querySelectorAll('.flex-grow-1 > div'); 
+    const contentSections = document.querySelectorAll('.flex-grow-1 > div');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            e.preventDefault(); 
+            e.preventDefault();
 
-            const targetId = this.getAttribute('href'); 
+            const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
                 // A. Retirer la mise en évidence de toutes les autres sections
                 contentSections.forEach(section => section.classList.remove(HIGHLIGHT_CLASS));
-                
+
                 // B. Appliquer la mise en évidence à la section ciblée
                 targetSection.classList.add(HIGHLIGHT_CLASS);
 
@@ -101,12 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // D. MODIFICATION : Utilisation de la nouvelle durée pour retirer l'effet
                 setTimeout(() => {
                     targetSection.classList.remove(HIGHLIGHT_CLASS);
-                }, HIGHLIGHT_DURATION_MS); 
-                
+                }, HIGHLIGHT_DURATION_MS);
+
                 // Optionnel: Maintenir l'ouverture/fermeture du menu parent
                 let parentCollapse = this.closest('.collapse');
                 if (parentCollapse && !parentCollapse.classList.contains('show')) {
-                     new bootstrap.Collapse(parentCollapse, { toggle: true });
+                    new bootstrap.Collapse(parentCollapse, { toggle: true });
                 }
             }
         });
@@ -118,9 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const initialLink = document.querySelector(`.btn-toggle-nav a[href="${currentHash}"]`);
         if (initialLink) {
             const initialSection = document.querySelector(currentHash);
-            
+
             // Applique la mise en évidence au chargement si un hash est présent
-            if(initialSection) {
+            if (initialSection) {
                 initialSection.classList.add(HIGHLIGHT_CLASS);
                 // MODIFICATION : Utilisation de la nouvelle durée pour retirer l'effet
                 setTimeout(() => {
@@ -131,8 +131,70 @@ document.addEventListener("DOMContentLoaded", function () {
             // S'assurer que le menu parent est bien ouvert
             let parentCollapse = initialLink.closest('.collapse');
             if (parentCollapse && !parentCollapse.classList.contains('show')) {
-                 new bootstrap.Collapse(parentCollapse, { toggle: true });
+                new bootstrap.Collapse(parentCollapse, { toggle: true });
             }
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('mainHeader');
+
+    // --- Événement Principal (FK Sapinera) ---
+    const fkSapineraButton = document.getElementById('toggleRulesButton');
+    const fkSapineraRulesContainer = document.getElementById('sapineraRulesContainer');
+
+    // --- Ancien Host 1 (Taupe Gun UHC) ---
+    const tgButton = document.getElementById('toggleTaupeGunRulesButton');
+    const tgRulesContainer = document.getElementById('taupeGunRulesContainer');
+
+    // --- Ancien Host 2 (FK Kukulkan) ---
+    const kukulkanButton = document.getElementById('toggleKukulkanRulesButton');
+    const kukulkanRulesContainer = document.getElementById('kukulkanRulesContainer');
+
+
+    // --- Fonction Générique de Bascule des Règles ---
+    function toggleRules(button, container, defaultText, activeText) {
+        if (button && container) {
+            button.addEventListener('click', function () {
+                if (container.style.display === 'none') {
+                    container.style.display = 'block'; // Affiche le conteneur
+                    button.textContent = activeText;
+                    // Défile vers les règles affichées
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    container.style.display = 'none'; // Masque le conteneur
+                    button.textContent = defaultText;
+                }
+            });
+        }
+    }
+
+    // --- Script de défilement (Header) ---
+    function checkScroll() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Vérifie au chargement
+
+    // --- Activation des Bascules de Règles ---
+    const fkSapineraDefaultText = 'Voir les Règles Détaillées FK';
+    const fkSapineraActiveText = 'Masquer les Règles Détaillées FK';
+    const fkGenericDefaultText = 'Voir les Règles';
+    const fkGenericActiveText = 'Masquer les Règles';
+
+    // FK Sapinera (En haut de page)
+    toggleRules(fkSapineraButton, fkSapineraRulesContainer, fkSapineraDefaultText, fkSapineraActiveText);
+
+    // Taupe Gun
+    toggleRules(tgButton, tgRulesContainer, fkGenericDefaultText, fkGenericActiveText);
+
+    // FK Kukulkan (Ancien Host)
+    toggleRules(kukulkanButton, kukulkanRulesContainer, fkGenericDefaultText, fkGenericActiveText);
+
 });

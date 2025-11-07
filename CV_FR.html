@@ -10,21 +10,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="main.js" defer></script>
     <title>CV Florian Ropert</title>
+    <style>
+        /* Style pour le bouton retour */
+        .btn-link:hover i {
+            color: #CCB1AB !important;
+        }
+    </style>
 </head>
 
 <body>
     <div class="d-flex">
-        <!-- ========================================== -->
-        <!-- 📌 SIDEBAR : Navigation principale du CV -->
-        <!-- ========================================== -->
         <div class="flex-shrink-0 p-3 text-white" style="width: 280px;">
-            <a href="/" class="d-flex align-items-center pb-3 mb-3 text-white text-decoration-none border-bottom">
-                <i class="bi bi-person-badge-fill me-2 fs-4 sidebar-icon-color"></i>
-                <span class="fs-5 fw-semibold">Ropert Florian</span>
-            </a>
+                <a href="index.html" class="btn btn-link text-white text-decoration-none p-0 me-3 btn-home" title="Retour à l'accueil">
+                    <i class="bi bi-house-door-fill fs-4"></i>
+                </a>
+                <a href="/" class="d-flex align-items-center text-white text-decoration-none flex-grow-1">
+                    <i class="bi bi-person-badge-fill me-2 fs-4 sidebar-icon-color"></i>
+                    <span class="fs-5 fw-semibold sidebar-title">Ropert Florian</span>
+                </a>
             <ul class="list-unstyled ps-0">
                 <li class="mb-1">
                     <button
@@ -108,24 +114,122 @@
                 </li>
                 <li class="border-top my-3"></li>
                 <li class="mb-1">
-                    <a href="cv.html"
+                    <a href="CV_EN.html"
                         class="nav-link text-white d-inline-flex align-items-center rounded border-0 px-3">
                         <i class="bi bi-globe2 me-2"></i>
                         English
                     </a>
                 </li>
             </ul>
-
         </div>
 
-        <!-- ================================================== -->
-        <!-- 📄 CONTENU PRINCIPAL : Toutes les sections du CV -->
-        <!-- ================================================== -->
-        
+        <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel" style="background-color: #23243C;">
+            <div class="offcanvas-header">
+                <a href="index.html" class="btn btn-link text-white text-decoration-none p-0 me-3 btn-home" title="Retour à l'accueil">
+                    <i class="bi bi-house-door-fill fs-4"></i>
+                </a>
+                <h5 class="offcanvas-title flex-grow-1" id="sidebarMenuLabel">
+                    <i class="bi bi-person-badge-fill me-2 sidebar-icon-color"></i>
+                    <span class="sidebar-title">Ropert Florian</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-3">
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1">
+                        <button
+                            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                            data-bs-toggle="collapse" data-bs-target="#home-collapse-mobile" aria-expanded="false">
+                            <i class="bi bi-person-vcard me-2"></i>
+                            Présentation
+                        </button>
+                        <div class="collapse" id="home-collapse-mobile">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#contact-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-envelope me-2"></i>Contact</a>
+                                </li>
+                                <li><a href="#hobbie-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-handball me-2"></i>Mes Loisirs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button
+                            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-mobile" aria-expanded="false">
+                            <i class="bi bi-mortarboard me-2"></i>
+                            Diplômes
+                        </button>
+                        <div class="collapse" id="dashboard-collapse-mobile">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#gcse-section" data-bs-dismiss="offcanvas" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-journal-check me-2"></i>Brevet</a>
+                                </li>
+                                <li><a href="#alevel-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-book me-2"></i>Baccalauréat</a>
+                                </li>
+                                <li><a href="#pix-section" data-bs-dismiss="offcanvas" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-award me-2"></i>Certification Pix</a>
+                                </li>
+                                <li><a href="#hnd-section" data-bs-dismiss="offcanvas" class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-terminal me-2"></i>BTS (1ère Année)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button
+                            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                            data-bs-toggle="collapse" data-bs-target="#orders-collapse-mobile" aria-expanded="false">
+                            <i class="bi bi-tools me-2"></i>
+                            Compétences
+                        </button>
+                        <div class="collapse" id="orders-collapse-mobile">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#web-skill-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-code-slash me-2"></i>Web</a>
+                                </li>
+                                <li><a href="#python-skill-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-filetype-py me-2"></i>Python</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button
+                            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white"
+                            data-bs-toggle="collapse" data-bs-target="#internship-collapse-mobile" aria-expanded="false">
+                            <i class="bi bi-briefcase me-2"></i>
+                            Stage
+                        </button>
+                        <div class="collapse" id="internship-collapse-mobile">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#ksb-internship-section" data-bs-dismiss="offcanvas"
+                                        class="link-light d-inline-flex text-decoration-none rounded"><i
+                                            class="bi bi-building me-2"></i>Expérience KSB</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="border-top my-3"></li>
+                    <li class="mb-1">
+                        <a href="cv.html"
+                            class="nav-link text-white d-inline-flex align-items-center rounded border-0 px-3">
+                            <i class="bi bi-globe2 me-2"></i>
+                            English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="flex-grow-1 p-5">
 
-            <!-- ========== SECTION : INFORMATIONS PERSONNELLES ========== -->
-            <!-- Jumbotron : Titre principal de la section -->
             <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="personal-information">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold"><i class="bi bi-person-vcard me-3"></i>Informations Personnelles</h1>
@@ -134,11 +238,8 @@
                 </div>
             </div>
 
-            <!-- Bloc de contenu : Contact & Loisirs (2 cartes côte à côte) -->
-            <!-- 🔄 Pour inverser l'ordre : déplacez les blocs <div class="col-md-6"> -->
             <div class="d-flex justify-content-center mb-5">
                 <div class="row align-items-md-stretch" style="width: 100%;">
-                    <!-- Carte 1 : Contact (col-md-6 = 50% de largeur) -->
                     <div class="col-md-6">
                         <div class="h-100 p-5 rounded-3 dark-card-color text-white" id="contact-section">
                             <h2><i class="bi bi-envelope-fill me-2"></i>Contact</h2>
@@ -149,7 +250,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Carte 2 : Loisirs (col-md-6 = 50% de largeur) -->
                     <div class="col-md-6">
                         <div class="h-100 p-5 border rounded-3 light-card-color text-dark" id="hobbie-section">
                             <h2><i class="bi bi-handball me-2"></i>Mes Loisirs</h2>
@@ -159,19 +259,14 @@
                 </div>
             </div>
 
-            <!-- ========== SÉPARATEUR ========== -->
-            <!-- Ligne de séparation entre sections principales -->
             <hr class="section-divider my-5">
 
-            <!-- ========== SECTION : DIPLÔMES ========== -->
-            <!-- Jumbotron : Titre principal de la section -->
             <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="diplomas-section">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold"><i class="bi bi-mortarboard me-3"></i>Diplômes et Formations</h1>
                 </div>
             </div>
 
-            <!-- Bloc de contenu 1 : Brevet & Baccalauréat (2 cartes côte à côte) -->
             <div class="d-flex justify-content-center mb-5">
                 <div class="row align-items-md-stretch" style="width: 100%;">
                     <div class="col-md-6">
@@ -191,7 +286,6 @@
                 </div>
             </div>
 
-            <!-- Bloc de contenu 2 : Pix & BTS (2 cartes côte à côte) -->
             <div class="d-flex justify-content-center mb-5">
                 <div class="row align-items-md-stretch" style="width: 100%;">
                     <div class="col-md-6">
@@ -211,11 +305,8 @@
                 </div>
             </div>
 
-            <!-- ========== SÉPARATEUR ========== -->
             <hr class="section-divider my-5">
 
-            <!-- ========== SECTION : COMPÉTENCES ========== -->
-            <!-- Jumbotron : Titre principal de la section -->
             <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="skills-section">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold"><i class="bi bi-tools me-3"></i>Compétences</h1>
@@ -223,7 +314,6 @@
                 </div>
             </div>
 
-            <!-- Bloc de contenu : Web & Python (2 cartes côte à côte) -->
             <div class="d-flex justify-content-center mb-5">
                 <div class="row align-items-md-stretch" style="width: 100%;">
                     <div class="col-md-6">
@@ -245,11 +335,8 @@
                 </div>
             </div>
 
-            <!-- ========== SÉPARATEUR ========== -->
             <hr class="section-divider my-5">
 
-            <!-- ========== SECTION : STAGE ========== -->
-            <!-- Jumbotron : Titre principal de la section -->
             <div class="p-5 mb-5 rounded-3 jumbotron-color text-white" id="internship-jumbotron">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold"><i class="bi bi-briefcase me-3"></i>Stage</h1>
@@ -257,8 +344,6 @@
                 </div>
             </div>
 
-            <!-- Bloc de contenu : KSB Experience (1 carte pleine largeur) -->
-            <!-- 📏 col-md-12 = 100% de largeur (carte unique) -->
             <div class="d-flex justify-content-center mb-5">
                 <div class="row align-items-md-stretch" style="width: 100%;">
                     <div class="col-md-12">

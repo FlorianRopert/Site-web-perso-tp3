@@ -1,55 +1,55 @@
-/* Reste du CSS pour la palette "Vintage Poudré" */
-/* PALETTE DE COULEURS
-#F5EEEA - Beige Très Clair/Ivoire (Fond Général)
-#CCB1AB - Rose Poudré Clair (Cartes Claires)
-#9D8F9C - Lavande Sourdine/Moyen (Jumbotron)
-#4B516B - Bleu Ardoise/Foncé (Cartes Foncées)
-#23243C - Bleu Nuit/Très Foncé (Barre Latérale & Texte Principal)
-*/
-
-/* --- COULEURS GÉNÉRALES --- */
-
 body {
-    background-color: #F5EEEA; /* Beige Très Clair */
-    color: #23243C; /* Bleu Nuit pour le texte principal */
+    background-color: #F5EEEA;
+    /* Beige Très Clair */
+    color: #23243C;
+    /* Bleu Nuit pour le texte principal */
 }
 
 .jumbotron-color {
-    background-color: #9D8F9C !important; /* Lavande Sourdine pour les grands titres de section */
+    background-color: #9D8F9C !important;
+    /* Lavande Sourdine pour les grands titres de section */
     color: #F5EEEA !important;
 }
 
 .dark-card-color {
-    background-color: #4B516B !important; /* Bleu Ardoise pour les cartes sombres */
+    background-color: #4B516B !important;
+    /* Bleu Ardoise pour les cartes sombres */
     color: #F5EEEA !important;
 }
 
 .light-card-color {
-    background-color: #CCB1AB !important; /* Rose Poudré Clair pour les cartes claires */
+    background-color: #CCB1AB !important;
+    /* Rose Poudré Clair pour les cartes claires */
     color: #23243C !important;
-    border-color: #9D8F9C !important; /* Bordure assortie au Jumbotron */
+    border-color: #9D8F9C !important;
+    /* Bordure assortie au Jumbotron */
 }
 
 /* --- BARRE LATÉRALE (SIDEBAR) --- */
 
 .flex-shrink-0 {
-    background-color: #23243C !important; /* Bleu Nuit */
-    color: #F5EEEA !important; /* Ivoire */
+    background-color: #23243C !important;
+    /* Bleu Nuit */
+    color: #F5EEEA !important;
+    /* Ivoire */
     min-height: 100vh;
 }
 
 .flex-shrink-0 .link-body-emphasis,
 .flex-shrink-0 .fs-5 {
-    color: #F5EEEA !important; /* Ivoire */
+    color: #F5EEEA !important;
+    /* Ivoire */
 }
 
 .sidebar-icon-color {
-    color: #CCB1AB !important; /* Rose Poudré pour l'icône */
+    color: #CCB1AB !important;
+    /* Rose Poudré pour l'icône */
 }
 
 .flex-shrink-0 .border-bottom,
 .flex-shrink-0 .border-top {
-    border-color: rgba(245, 238, 234, 0.2) !important; /* Bordure Ivoire transparente */
+    border-color: rgba(245, 238, 234, 0.2) !important;
+    /* Bordure Ivoire transparente */
 }
 
 /* --- BOUTONS DE LA BARRE LATÉRALE (Toggle Buttons) --- */
@@ -59,7 +59,8 @@ body {
     align-items: center;
     padding: .25rem .5rem;
     font-weight: 600;
-    color: rgba(245, 238, 234, 0.85); /* Ivoire transparent */
+    color: rgba(245, 238, 234, 0.85);
+    /* Ivoire transparent */
     background-color: transparent;
     border: 0;
     transition: box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -67,13 +68,16 @@ body {
 
 .flex-shrink-0 .btn-toggle {
     color: rgba(245, 238, 234, 0.85);
-    background-color: #23243C !important; /* Assure le fond Bleu Nuit */
+    background-color: #23243C !important;
+    /* Assure le fond Bleu Nuit */
 }
 
 .btn-toggle:hover,
 .btn-toggle:focus {
-    color: #F5EEEA; /* Ivoire */
-    background-color: #4B516B; /* Bleu Ardoise au survol */
+    color: #F5EEEA;
+    /* Ivoire */
+    background-color: #4B516B;
+    /* Bleu Ardoise au survol */
     box-shadow: 0 0 0 1px #F5EEEA;
     border-radius: .375rem;
 }
@@ -98,7 +102,8 @@ body {
 
 /* Navigation des sous-menus (liens) */
 .flex-shrink-0 .btn-toggle-nav a {
-    color: rgba(245, 238, 234, 0.65); /* Ivoire transparent */
+    color: rgba(245, 238, 234, 0.65);
+    /* Ivoire transparent */
 }
 
 .btn-toggle-nav a {
@@ -116,9 +121,11 @@ body {
 
 .flex-shrink-0 .btn-toggle-nav a:hover,
 .flex-shrink-0 .btn-toggle-nav a:focus {
-    background-color: #4B516B; /* Bleu Ardoise au survol */
+    background-color: #4B516B;
+    /* Bleu Ardoise au survol */
     color: #F5EEEA;
 }
+
 /* Ajoutez ceci à la fin de votre fichier style.css */
 
 /* État initial : invisible et légèrement décalé vers le bas */
@@ -134,25 +141,217 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Ajoutez ceci à la fin de votre fichier style.css pour un séparateur de section visible */
 .section-divider {
-    border: 0; /* Enlève la bordure par défaut */
-    height: 4px; /* Rend la ligne épaisse */
+    border: 0;
+    /* Enlève la bordure par défaut */
+    height: 4px;
+    /* Rend la ligne épaisse */
     /* Utilise une couleur foncée de votre palette pour une distinction maximale */
-    background-color: #000000; 
-    opacity: 0.8; /* Légère transparence pour l'adoucir un peu */
-    border-radius: 2px; /* Adoucit les coins */
+    background-color: #000000;
+    opacity: 0.8;
+    /* Légère transparence pour l'adoucir un peu */
+    border-radius: 2px;
+    /* Adoucit les coins */
 }
-/* --- NOUVELLE RÈGLE POUR METTRE EN ÉVIDENCE LA SECTION DE CONTENU --- */
 
-/* Appliquer cette classe aux Jumbotrons ou aux conteneurs de cartes */
 .highlighted-section {
     box-shadow: 0 0 0 8px rgba(75, 81, 107, 0.4),
-                0 0 15px rgba(35, 36, 60, 0.6);
-    
-    transform: scale(1.005); 
-    
+        0 0 15px rgba(35, 36, 60, 0.6);
+
+    transform: scale(1.005);
+
     /* MODIFICATION : Augmentation de la durée de la transition CSS */
-    transition: box-shadow 1.5s ease-in-out, transform 1.5s ease-in-out; 
+    transition: box-shadow 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
-/* ... le reste de votre CSS ... */
+
+/* --- STYLE BOUTON RETOUR HOME --- */
+.btn-home {
+    transition: all 0.3s ease;
+    /* MODIFICATION CLÉ : Augmente la zone cliquable du bouton Accueil */
+    padding: 0.5rem !important; 
+}
+
+.btn-link:hover i {
+    color: #CCB1AB !important;
+    transform: scale(1.1);
+}
+
+.btn-home:hover {
+    background-color: rgba(204, 177, 171, 0.1) !important;
+    border-radius: 0.375rem;
+    transform: translateX(-3px);
+}
+
+.btn-home:active {
+    transform: scale(0.95);
+}
+
+/* --- MEDIA QUERIES POUR LA RESPONSIVITÉ --- */
+
+/* Tablettes et petits écrans (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Sidebar prend toute la largeur et devient un menu horizontal ou empilé */
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .flex-shrink-0 {
+        width: 100% !important;
+        min-height: auto;
+        padding: 1rem !important;
+    }
+
+    /* Cartes empilées sur une colonne */
+    .col-md-6 {
+        margin-bottom: 1rem;
+    }
+
+    /* Réduction de la taille des jumbotrons */
+    .jumbotron-color h1 {
+        font-size: 2rem;
+    }
+
+    .jumbotron-color p {
+        font-size: 1rem;
+    }
+}
+
+/* Smartphones (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Réduction du padding général */
+    .flex-grow-1 {
+        padding: 1rem !important;
+    }
+
+    /* Jumbotrons plus compacts */
+    .jumbotron-color {
+        padding: 1.5rem !important;
+    }
+
+    .jumbotron-color .container-fluid {
+        padding: 1rem !important;
+    }
+
+    .jumbotron-color h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .jumbotron-color p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Cartes plus compactes */
+    .dark-card-color,
+    .light-card-color {
+        padding: 1.5rem !important;
+    }
+
+    .dark-card-color h2,
+    .light-card-color h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Sidebar: liens plus espacés pour faciliter le clic */
+    .btn-toggle-nav a {
+        padding: 0.5rem 1rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Marges réduites */
+    .mb-5 {
+        margin-bottom: 2rem !important;
+    }
+
+    .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Responsive pour le bouton retour */
+    .btn-home {
+        font-size: 1.2rem;
+    }
+    
+    .btn-home i {
+        font-size: 1.5rem !important;
+    }
+    
+    .sidebar-title {
+        font-size: 1.1rem !important; /* Ajusté pour l'alignement */
+    }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Police encore plus petite */
+    body {
+        font-size: 0.9rem;
+    }
+
+    /* Jumbotrons très compacts */
+    .jumbotron-color {
+        padding: 1rem !important;
+    }
+
+    .jumbotron-color h1 {
+        font-size: 1.3rem !important;
+    }
+
+    .jumbotron-color p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Cartes très compactes */
+    .dark-card-color,
+    .light-card-color {
+        padding: 1rem !important;
+    }
+
+    .dark-card-color h2,
+    .light-card-color h2 {
+        font-size: 1.1rem;
+    }
+
+    /* Icônes légèrement plus petites */
+    .bi {
+        font-size: 1rem;
+    }
+
+    /* Sidebar plus compact */
+    .flex-shrink-0 a span {
+        font-size: 1.1rem !important;
+    }
+
+    .btn-toggle {
+        font-size: 0.9rem;
+    }
+
+    /* Séparateur plus fin */
+    .section-divider {
+        height: 2px;
+    }
+
+    /* Bouton home très compact */
+    .btn-home {
+        font-size: 1rem;
+        padding: 0.25rem !important;
+    }
+    
+    .btn-home i {
+        font-size: 1.2rem !important;
+    }
+    
+    .sidebar-title {
+        font-size: 1rem !important;
+    }
+}
+
+/* Mode paysage sur mobiles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .flex-shrink-0 {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
